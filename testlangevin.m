@@ -18,5 +18,39 @@ classdef testlangevin < matlab.unittest.TestCase
 
             testCase.verifyLessThanOrEqual(actual_L, tol);
         end
+
+        function test_langevin_goes_to_unity(testCase)
+            % Specify the input(s) of
+            % langevin
+            tol = 1e-6;
+            mu0 = 4*pi*1e-7;
+            Hc = 1.7/mu0;
+            a = 0.5/mu0;
+            H = inf;
+
+
+            expected_L = 1.0;
+            % Exercise the function langevin
+            actual_L = langevin(H, Hc, a);
+
+            testCase.verifyLessThanOrEqual(abs(expected_L-actual_L), tol);
+        end
+
+        function test_langevin_goes_to_minus_unity(testCase)
+            % Specify the input(s) of
+            % langevin
+            tol = 1e-6;
+            mu0 = 4*pi*1e-7;
+            Hc = 0.2/mu0;
+            a = 0.032/mu0;
+            H = -inf;
+
+
+            expected_L = -1.0;
+            % Exercise the function langevin
+            actual_L = langevin(H, Hc, a);
+
+            testCase.verifyLessThanOrEqual(abs(expected_L-actual_L), tol);
+        end
     end
 end

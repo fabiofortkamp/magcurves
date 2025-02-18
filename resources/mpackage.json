@@ -1,0 +1,21 @@
+{
+    "name": "magcurves",
+    "version": "0.1.0",
+    "id": "35c0e6e5-616d-4666-994c-e0dc0efef8b3",
+    "formerNames": [],
+    "displayName": "magcurves",
+    "summary": "Magnetization curves for magnetism simulations",
+    "description": "langevin(H,Hc,a) computes the Langevin curve",
+    "provider": {
+        "name": "Fábio Pinto Fortkamp",
+        "organization": "Technical University of Denmark",
+        "email": "fapfor@dtu.dk",
+        "url": ""
+    },
+    "folders": [
+       
+    ],
+    "dependencies": [],
+    "releaseCompatibility": "",
+    "schemaVersion": "1.0.0"
+}
